@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 #include <random>
 #include <unordered_map>
@@ -23,7 +22,7 @@ void loop() {
         int rakip_index = rand() % 12;
         int oyuncu_index = rand() % 12;
         int j = 0;
-        for (const auto pair : CardValues){
+        for (){
             if (rakip_index == j){
                 Rakipkartlar[i] = pair.first;
                 rakipskor += pair.second;
@@ -33,7 +32,7 @@ void loop() {
                 oyuncuskor += pair.second;
             }
             j++;
-        })
+        }
     }
     
     
