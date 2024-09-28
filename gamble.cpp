@@ -33,6 +33,9 @@ void loop() {
     }
     cout << "rakibin ilk kartı: " << Rakipkartlar[0] << " " << CardTypes[rand()%4] << endl;
     cout << "senin kartlar: " << Oyuncukartlar[0] << " " << CardTypes[rand()%4] << " ve " << Oyuncukartlar[1] << " " << CardTypes[rand()%4];
+    cout << "hocam üçüncü kart alacak mısın? evet için 1 ve hayır için 0 koyunuz" << endl;
+    string karar;
+    cin >> karar;
 }
 
 int main() {
