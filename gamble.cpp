@@ -22,7 +22,7 @@ void loop() {
     for (int i = 0; i != 2; ++i){
         int rakip_index = rand() % 12;
         int oyuncu_index = rand() % 12;
-        for (int j = 0; j != sizeof(CardKeys)/sizeof(CardKeys[0]); ++j){
+        for (int j = 0; j != sizeof(CardKeys)/2; ++j){
             if (rakip_index == j){
                 Rakipkartlar[i] = CardKeys[j];
                 rakipskor += CardValues[CardKeys[j]];
@@ -33,13 +33,11 @@ void loop() {
             }
         }
     }
-    
-    
 }
 
 int main() {
     cout << "Blackjack'e hoşgeldin aga" << endl;
-    cout << "Hocam kumarda çok para diğe birşey yok";
+    cout << "Hocam kumarda çok para diğe birşey yok" << endl;;
     loop();
     return 0;
 }
