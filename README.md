@@ -1,1 +1,1 @@
-Aga kumar için hep para vardır
+Hocam kumar için hep para vardır
