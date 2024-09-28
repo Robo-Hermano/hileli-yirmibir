@@ -6,11 +6,11 @@
 using namespace std;
 
 void victory() {
-    cout << "hocam 1 000 000 tl kazandın!";
+    cout << "hocam 1 000 000 tl kazandın!" << endl;
 }
 
 void defeat() {
-    cout << "hocam 1 000 000 tl kaybettin!";
+    cout << "hocam 1 000 000 tl kaybettin!" << endl;
 }
 
 void loop() {
