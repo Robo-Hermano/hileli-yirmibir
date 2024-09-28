@@ -8,8 +8,8 @@ using namespace std;
 void loop() {
     int rakipskor = 0;
     int oyuncuskor = 0;
-    vector<string> Rakipkartlar[3];
-    vector<string> Oyuncukartlar[3];
+    vector<string> Rakipkartlar(3);
+    vector<string> Oyuncukartlar(3);
     unordered_map <string, int> CardValues;
     vector<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
     CardValues["ikili"] = 2; CardValues["üçlü"] = 3; CardValues["dörtlü"] = 4;
