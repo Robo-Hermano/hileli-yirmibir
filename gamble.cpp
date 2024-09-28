@@ -19,17 +19,15 @@ void loop() {
     //CardValues["aslı"] = list<int>[1, 11];
 
     vector<string> CardKeys = {"ikili","üçlü","dörtlü","beşli","altılı","yedili","sekizli","dokuzlu","onlu","Jack","Kraliçe","Kral"};
-    for (int i = 0; i != 2; ++i){
+    for (int i = 0; i != 3; ++i){
         int rakip_index = rand() % 12;
         int oyuncu_index = rand() % 12;
         for (int j = 0; j != sizeof(CardKeys)/2; ++j){
             if (rakip_index == j){
                 Rakipkartlar[i] = CardKeys[j];
-                rakipskor += CardValues[CardKeys[j]];
             }
             if (oyuncu_index == j){
                 Oyuncukartlar[i] = CardKeys[j];
-                oyuncuskor += CardValues[CardKeys[j]];
             }
         }
     }
