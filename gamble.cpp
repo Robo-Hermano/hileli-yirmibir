@@ -2,13 +2,13 @@
 #include <iostream>
 #include <random>
 #include <unordered_map>
-#include <list>
+#include <vector>
 
 using namespace std;
 
 void loop() {
     unordered_map <string, int> CardValues;
-    list<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
+    vector<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
     CardValues["ikili"] = 2; CardValues["üçlü"] = 3; CardValues["dörtlü"] = 4;
     CardValues["beşli"] = 5; CardValues["altılı"] = 6; CardValues["yedili"] = 7;
     CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
