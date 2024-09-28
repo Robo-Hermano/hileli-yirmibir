@@ -36,7 +36,7 @@ void loop() {
     cout << "hocam üçüncü kart alacak mısın? evet için 1 ve hayır için 0 koyunuz" << endl;
     int karar;
     cin >> karar;
-    while (isdigit(karar) == false or (karar != 0 and karar != 1)) {
+    while (isdigit(karar) == false or karar != 0 and karar != 1) {
         cout << "lütfen karara göre 1 yada 0 koyun" << endl;
         cin >> karar;
     }
