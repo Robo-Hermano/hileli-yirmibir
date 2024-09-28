@@ -31,6 +31,7 @@ void loop() {
             }
         }
     }
+    cout << "rakibin ilk kartı: " << Rakipkartlar[0] << " " << CardTypes[rand()/4] << endl;
 }
 
 int main() {
