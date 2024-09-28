@@ -9,7 +9,7 @@
 using namespace std;
 
 //Just so I don't have to write them out on every combination of conditions
-//Her son durumda zafer yada yenilgi cümlesini yapmak yerine böyle fonksiyon kurup çağırmak daha kolay
+//Her son durumda zafer yada yenilgi cümlesini yapmak yerine böyle işlev kurup çağırmak daha kolay
 void victory() {
     cout << "hocam 1 000 000 tl kazandın! Zafere devam!" << endl;
 }
@@ -38,6 +38,8 @@ void loop() {
     CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
     CardValues["Jack"] = 10; CardValues["Kraliçe"] = 10; CardValues["Kral"] = 10; 
 
+    //simulates dealer handing out cards using randomization; then puts the cards of player and house in list for later
+    //gerçek hayatta krupiyenin kart dağıtmasını simüle ediyor. Daha sonra operaysonlar için senin ve evin kartları liste koyuyoruz
     vector<string> CardKeys = {"ikili","üçlü","dörtlü","beşli","altılı","yedili","sekizli","dokuzlu","onlu","Jack","Kraliçe","Kral"};
     for (int i = 0; i != 3; ++i){
         int rakip_index = rand() % 12;
@@ -51,19 +53,26 @@ void loop() {
             }
         }
     }
+    
     cout << "rakibin ilk kartı: " << Rakipkartlar[0] << " " << CardTypes[rand()%4] << endl;
     cout << "senin kartlar: " << Oyuncukartlar[0] << " " << CardTypes[rand()%4] << " ve " << Oyuncukartlar[1] << " " << CardTypes[rand()%4] << endl;
-    cout << "hocam üçüncü kart alacak mısın? evet için 1 ve hayır için 0 koyunuz" << endl;
+    cout << "hocam üçüncü kart alacak mısın? evet için 1 ve hayır için 0 koyunuz" << endl; //decision to hit or stand
     int karar;
     cin >> karar;
     while (karar != 0 and karar != 1) {
-        cout << "lütfen karara göre 1 yada 0 koyun" << endl;
+        cout << "lütfen karara göre 1 yada 0 koyun" << endl; //validation check just to prevent errors
         cin >> karar;
     }
+
+    //there's a third card in the list which will be included in the loop for tallying score if players decided to hit
+    //listede üçüncü kart var, oyuncu evet derse puan toplamada bu kartda kullanılıyor
     int index = 2;
     if (karar == 1){
-        index++;
+        index++; 
     }
+
+    //the rest is tallying out scores and calling defeat or victory depending on who wins
+    //kalanı puan toplamak ve kimin kazandığını görüp uyan işlevi çağırmak
     for (int k = 0; k != index; k++){
         oyuncuskor += CardValues[Oyuncukartlar[k]];
     }
@@ -73,6 +82,8 @@ void loop() {
     }
     else {
         rakipskor += CardValues[Rakipkartlar[0]] + CardValues[Rakipkartlar[1]];
+        //if player is higher but not past 21, house will stand, which is why it's technically even more unfair blackjack
+        //evin üçüncü kart alması komple oyuncunun durumuna bağlı, ve beyler bu yüzden dolayı bu hileli yirmibir (ve başka şeyler)
         if (oyuncuskor > rakipskor){
             rakipskor += CardValues[Rakipkartlar[2]];
         }
