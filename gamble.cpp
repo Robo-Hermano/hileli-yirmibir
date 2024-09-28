@@ -14,7 +14,7 @@ void loop() {
     CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
     CardValues["Jack"] = 10; CardValues["Kraliçe"] = 10; CardValues["Kral"] = 10; 
     //CardValues["aslı"] = list<int>[1, 11];
-    for (let i = 0; i < 2; i++){
+    for (int i = 0; i < 2; i++){
         
     }
     
