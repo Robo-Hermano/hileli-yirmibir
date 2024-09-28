@@ -32,13 +32,20 @@ void loop() {
         }
     }
     cout << "rakibin ilk kartı: " << Rakipkartlar[0] << " " << CardTypes[rand()%4] << endl;
-    cout << "senin kartlar: " << Oyuncukartlar[0] << " " << CardTypes[rand()%4] << " ve " << Oyuncukartlar[1] << " " << CardTypes[rand()%4];
+    cout << "senin kartlar: " << Oyuncukartlar[0] << " " << CardTypes[rand()%4] << " ve " << Oyuncukartlar[1] << " " << CardTypes[rand()%4] << endl;
     cout << "hocam üçüncü kart alacak mısın? evet için 1 ve hayır için 0 koyunuz" << endl;
     int karar;
     cin >> karar;
     while (isdigit(karar) == false or karar != 0 and karar != 1) {
         cout << "lütfen karara göre 1 yada 0 koyun" << endl;
         cin >> karar;
+    }
+    int index = 2;
+    if (karar == 1){
+        index++;
+    }
+    for (int k = 0; k != index; k++){
+        oyuncuskor += CardValues[Oyuncukartlar[k]];
     }
 }
 
