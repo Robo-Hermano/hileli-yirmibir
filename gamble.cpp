@@ -63,19 +63,20 @@ void loop() {
         rakipskor += CardValues[Rakipkartlar[0]] + CardValues[Rakipkartlar[1]];
         if (oyuncuskor > rakipskor){
             rakipskor += CardValues[Rakipkartlar[2]];
-            cout << rakipskor << endl;
-            if (rakipskor > 21){
+        }
+        cout << rakipskor << endl;
+        if (rakipskor > 21){
                 victory();
             }
-            else if (oyuncuskor > rakipskor){
+        else if (oyuncuskor > rakipskor){
                 victory();
             }
-            else {
+        else {
                 defeat();
             }
         }
     }
-}
+
 
 int main() {
     cout << "Blackjack'e hoşgeldin aga" << endl;
