@@ -8,6 +8,8 @@
 
 using namespace std;
 
+//Just so I don't have to write them out on every combination of conditions
+//Her son durumda zafer yada yenilgi cümlesini yapmak yerine böyle fonksiyon kurup çağırmak daha kolay
 void victory() {
     cout << "hocam 1 000 000 tl kazandın! Zafere devam!" << endl;
 }
@@ -17,12 +19,20 @@ void defeat() {
 }
 
 void loop() {
+    //initialising scores and arrays
+    //bunları kart ve puan toplamak için kullanıyoruz
     int rakipskor = 0;
     int oyuncuskor = 0;
     vector<string> Rakipkartlar(3);
     vector<string> Oyuncukartlar(3);
-    unordered_map <string, int> CardValues;
+    
+    //assign to the number values to make it more realistic
+    //gerçeklik için, bir kart türü numara değerine bağlıyor daha sonra
     vector<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
+
+    //maps the cards to their respective values
+    //kart ismini koyduğunda bağlantılı puanı veriyor
+    unordered_map <string, int> CardValues;
     CardValues["ikili"] = 2; CardValues["üçlü"] = 3; CardValues["dörtlü"] = 4;
     CardValues["beşli"] = 5; CardValues["altılı"] = 6; CardValues["yedili"] = 7;
     CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
@@ -80,13 +90,15 @@ void loop() {
     }
 
 
+//decided put initial text here and separate actual calculations and operations to make it simpler
+//başlangıç konuşumu ve asıl yazılımı bakması daha kolay olsun diye böldüm
 int main() {
     cout << "Blackjack'e hoşgeldin aga" << endl;
     cout << "" << endl;
     cout << "Ekstra kurallar: şansa güvenmen lazım. O yüzden ham ası kaldırdık (böyle bir kara verebilmek şansına güvenmiyorsun demek) " << endl;
     cout << "ve aynı puan durumunde ev kazanıyor. Ama senin için fark etmemeli kumarcı kendi şansına RUHLA inanır." << endl;
     cout << "" << endl;
-    cout << "Kalan para: Hocam kumarda çok para diğe birşey yok" << endl;
+    cout << "Kalan para: Hocam kumarda çok para diye birşey yok" << endl;
     cout << "" << endl;
     cout << "" << endl;
     loop();
