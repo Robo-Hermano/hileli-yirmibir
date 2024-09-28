@@ -24,7 +24,6 @@ void loop() {
     CardValues["beşli"] = 5; CardValues["altılı"] = 6; CardValues["yedili"] = 7;
     CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
     CardValues["Jack"] = 10; CardValues["Kraliçe"] = 10; CardValues["Kral"] = 10; 
-    //CardValues["aslı"] = list<int>[1, 11];
 
     vector<string> CardKeys = {"ikili","üçlü","dörtlü","beşli","altılı","yedili","sekizli","dokuzlu","onlu","Jack","Kraliçe","Kral"};
     for (int i = 0; i != 3; ++i){
@@ -80,7 +79,13 @@ void loop() {
 
 int main() {
     cout << "Blackjack'e hoşgeldin aga" << endl;
-    cout << "Hocam kumarda çok para diğe birşey yok" << endl;;
+    cout << "" << endl;
+    cout << "Ekstra kurallar: şansa güvenmen lazım. O yüzden ham ası kaldırdık (böyle bir kara verebilmek şansına güvenmiyorsun demek) " << endl;
+    cout << "ve aynı puan durumunde ev kazanıyor. Ama senin için fark etmemeli kumarcı kendi şansına RUHLA inanır." << endl;
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "Kalan para: Hocam kumarda çok para diğe birşey yok" << endl;
     loop();
     return 0;
 }
