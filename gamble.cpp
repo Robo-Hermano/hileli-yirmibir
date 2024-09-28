@@ -18,8 +18,8 @@ void loop() {
     CardValues["Jack"] = 10; CardValues["Kraliçe"] = 10; CardValues["Kral"] = 10; 
     //CardValues["aslı"] = list<int>[1, 11];
 
-    vector<string> Cardkeys = CardValues.keys();
-    for (int i = 0; i < 2; i++){
+    vector<string> CardKeys = {"ikili","üçlü","dörtlü","beşli","altılı","yedili","sekizli","dokuzlu","onlu","Jack","Kraliçe","Kral"};
+    for (int i = 0; i != 2; ++i){
         int rakip_index = rand() % 12;
         int oyuncu_index = rand() % 12;
         for (int j = 0; j != sizeof(CardKeys)/sizeof(CardKeys[0]); ++j){
