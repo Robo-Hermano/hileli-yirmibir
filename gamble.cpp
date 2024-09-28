@@ -11,6 +11,12 @@ void loop() {
     list<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
     CardValues["ikili"] = 2; CardValues["üçlü"] = 3; CardValues["dörtlü"] = 4;
     CardValues["beşli"] = 5; CardValues["altılı"] = 6; CardValues["yedili"] = 7;
+    CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
+    CardValues["Jack"] = 10; CardValues["Kraliçe"] = 10; CardValues["Kral"] = 10; 
+    //CardValues["aslı"] = list<int>[1, 11];
+    for (let i = 0; i < 2; i++){
+        
+    }
     
     
 }
