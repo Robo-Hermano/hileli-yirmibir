@@ -1,3 +1,6 @@
+//Sorry for confusion in understanding due to hybrid of English and Turkish
+//Türkçe ve İngilizce karışımdan dolayı okuma zorluğunu affedersiniz.
+
 #include <iostream>
 #include <random>
 #include <unordered_map>
