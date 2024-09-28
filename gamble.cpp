@@ -10,9 +10,8 @@ using namespace std;
 void loop() {
     unordered_map <string, int> CardValues;
     list<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
-    CardValues["ikili"] = 2;
-    CardValues["üçlü"] = 3;
-    CardValues["dörtlü"] = 4;
+    CardValues["ikili"] = 2; CardValues["üçlü"] = 3; CardValues["dörtlü"] = 4;
+    CardValues["beşli"] = 5; CardValues["altılı"] = 6; CardValues["yedili"] = 7;
     
     
 }
