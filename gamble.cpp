@@ -55,7 +55,7 @@ void loop() {
     for (int k = 0; k != index; k++){
         oyuncuskor += CardValues[Oyuncukartlar[k]];
     }
-
+    cout << oyuncuskor << endl;
     if (oyuncuskor > 21) {
         defeat();
     }
