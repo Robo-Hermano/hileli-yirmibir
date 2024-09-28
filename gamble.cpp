@@ -5,6 +5,14 @@
 
 using namespace std;
 
+void victory() {
+    cout << "hocam 1 000 000 tl kazandın!";
+}
+
+void defeat() {
+    cout << "hocam 1 000 000 tl kaybettin!";
+}
+
 void loop() {
     int rakipskor = 0;
     int oyuncuskor = 0;
@@ -36,7 +44,7 @@ void loop() {
     cout << "hocam üçüncü kart alacak mısın? evet için 1 ve hayır için 0 koyunuz" << endl;
     int karar;
     cin >> karar;
-    while (isdigit(karar) == false or karar != 0 and karar != 1) {
+    while (karar != 0 and karar != 1) {
         cout << "lütfen karara göre 1 yada 0 koyun" << endl;
         cin >> karar;
     }
@@ -46,6 +54,13 @@ void loop() {
     }
     for (int k = 0; k != index; k++){
         oyuncuskor += CardValues[Oyuncukartlar[k]];
+    }
+
+    if (oyuncuskor > 21) {
+        defeat();
+    }
+    else {
+        
     }
 }
 
