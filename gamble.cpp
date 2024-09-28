@@ -7,6 +7,10 @@
 using namespace std;
 
 void loop() {
+    int rakipskor = 0;
+    int oyuncuskor = 0;
+    vector<string> Rakipkartlar[3];
+    vector<string> Oyuncukartlar[3];
     unordered_map <string, int> CardValues;
     vector<string> CardTypes = {"Kalp", "Elmas", "Maça", "Sinek"};
     CardValues["ikili"] = 2; CardValues["üçlü"] = 3; CardValues["dörtlü"] = 4;
@@ -14,8 +18,22 @@ void loop() {
     CardValues["sekizli"] = 8; CardValues["dokuzlu"] = 9; CardValues["onlu"] = 10;
     CardValues["Jack"] = 10; CardValues["Kraliçe"] = 10; CardValues["Kral"] = 10; 
     //CardValues["aslı"] = list<int>[1, 11];
+    
     for (int i = 0; i < 2; i++){
-        
+        int rakip_index = rand() % 12;
+        int oyuncu_index = rand() % 12;
+        int j = 0;
+        for (const auto pair : CardValues){
+            if (rakip_index == j){
+                Rakipkartlar[i] = pair.first;
+                rakipskor += pair.second;
+            }
+            if (oyuncu_index == j){
+                Oyuncukartlar[i] = pair.first;
+                oyuncuskor += pair.second;
+            }
+            j++;
+        })
     }
     
     
