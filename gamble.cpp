@@ -6,11 +6,11 @@
 using namespace std;
 
 void victory() {
-    cout << "hocam 1 000 000 tl kazandın!" << endl;
+    cout << "hocam 1 000 000 tl kazandın! Zafere devam!" << endl;
 }
 
 void defeat() {
-    cout << "hocam 1 000 000 tl kaybettin!" << endl;
+    cout << "hocam 1 000 000 tl kaybettin! Merak etme diğer rauntda geri kazanırsın." << endl;
 }
 
 void loop() {
@@ -83,9 +83,9 @@ int main() {
     cout << "Ekstra kurallar: şansa güvenmen lazım. O yüzden ham ası kaldırdık (böyle bir kara verebilmek şansına güvenmiyorsun demek) " << endl;
     cout << "ve aynı puan durumunde ev kazanıyor. Ama senin için fark etmemeli kumarcı kendi şansına RUHLA inanır." << endl;
     cout << "" << endl;
-    cout << "" << endl;
-    cout << "" << endl;
     cout << "Kalan para: Hocam kumarda çok para diğe birşey yok" << endl;
+    cout << "" << endl;
+    cout << "" << endl;
     loop();
     return 0;
 }
