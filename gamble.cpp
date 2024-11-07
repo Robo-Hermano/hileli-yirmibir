@@ -65,7 +65,7 @@ void loop() {
     }
 
     //there's a third card in the list which will be included in the loop for tallying score if players decided to hit
-    //listede üçüncü kart var, oyuncu evet derse puan toplamada bu kartda kullanılıyor
+    //listede üçüncü kart var, oyuncu evet derse puan toplamada bu kart da kullanılıyor
     int index = 2;
     if (karar == 1){
         index++; 
