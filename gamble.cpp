@@ -102,7 +102,7 @@ void loop() {
 
 
 //decided put initial text here and separate actual calculations and operations to make it simpler
-//başlangıç konuşumu ve asıl yazılımı bakması daha kolay olsun diye böldüm
+//başlangıç konuşmayı ve asıl yazılımı bakmak daha kolay olur diye böldüm
 int main() {
     cout << "Blackjack'e hoşgeldin aga" << endl;
     cout << "" << endl;
